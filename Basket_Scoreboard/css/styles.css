@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'Takeup';
+    src: url('../fonts/Takeup.ttf') format('truetype');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(90deg, #00171f 35%, #610000); 
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.team-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.controls-container {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.period-container, .possession-container, .game-timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    height: 30%;
+}
+
+.game-timer-container {
+    height: 40%;
+}
+
+.team-container h2, .controls-container h2 {
+
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+.label {
+    color: #fff;
+    margin-bottom: 5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+.score, .fouls, .period-control, .possession-timer {
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    background: none; 
+    border-radius: 5px;
+    text-align: center;
+    width: 100px; 
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.score {
+    font-size: 12em; 
+    font-family: 'Takeup', Arial, sans-serif; 
+    width: 100%; 
+    margin: 0 10px; 
+}
+
+.game-timer {
+    font-size: 4.5em; 
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+    background: none; 
+    border-radius: 5px;
+    text-align: center;
+    width: 100%; 
+    color: #ff0000; 
+    margin: 0 10px; 
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+.score.team1 {
+    color: #007bff; 
+}
+
+.score.team2 {
+    color: #ff0000; 
+}
+
+.fouls.team2, .fouls.team1 {
+    color: #fff;
+    font-size: 4.5em;
+}
+
+.period-control {
+    color: #fff;
+    font-size: 2em;
+}
+
+.possession-timer {
+    color: #ffff00; 
+    height: 50%;
+    width: 100%;
+    margin: none;
+    padding: none;
+    font-size: 4em;
+}
+
+button {
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background: none; 
+    color: white;
+    border-radius: 5px;
+    width: 100px; 
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+.possession-buttons {
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    width: 50%;
+}
+
+@font-face {
+    font-family: 'Takeup';
+    src: url('../fonts/Takeup.ttf') format('truetype');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(90deg, #00171f 35%, #610000); 
+}
+
+.landscape-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+@media screen and (orientation: portrait) {
+    .scoreboard {
+        display: none;
+    }
+    .landscape-message {
+        display: flex;
+    }
+}
+@font-face {
+    font-family: 'Takeup';
+    src: url('../fonts/Takeup.ttf') format('truetype');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(90deg, #00171f 35%, #610000); 
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.team-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.landscape-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}

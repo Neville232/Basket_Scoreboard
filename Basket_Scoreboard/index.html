@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="landscape-message" id="landscape-message">
+        Mira muchacho pajuo, te voy a decir una vaina, gira esa mierda si quieres usar esta vaina
+    </div>
+    <div class="scoreboard" id="scoreboard">
+        <div class="team-container" id="team1">
+            <h2>Team 1</h2>
+            <button class="score team1" id="team1-points">000</button>
+            <div class="label">FALTAS</div>
+            <button class="fouls team1" id="team1-fouls">0</button>
+        </div>
+        
+        <div class="controls-container">
+            <div class="period-container">
+                <div class="label">PERIODO</div>
+                <button class="period-control" id="game-period">1</button>
+            </div>
+            <div class="possession-container">
+                <div class="label">POSESION</div>
+                <button class="possession-timer" id="possession-timer">24</button>
+                <div class="possession-buttons">
+                    <button id="timer-24">24</button>
+                    <button id="timer-14">14</button>
+                </div>
+            </div>
+            <div class="game-timer-container">
+                <button class="game-timer" id="game-timer">00:00</button>
+            </div>
+        </div>
+        
+        <div class="team-container" id="team2">
+            <h2>Team 2</h2>
+            <button class="score team2" id="team2-points">000</button>
+            <div class="label">FALTAS</div>
+            <button class="fouls team2" id="team2-fouls">0</button>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script>
+        function checkOrientation() {
+            const landscapeMessage = document.getElementById('landscape-message');
+            const scoreboard = document.getElementById('scoreboard');
+            if (window.innerWidth < window.innerHeight) {
+                landscapeMessage.style.display = 'flex';
+                scoreboard.style.display = 'none';
+            } else {
+                landscapeMessage.style.display = 'none';
+                scoreboard.style.display = 'flex';
+            }
+        }
+
+        window.addEventListener('resize', checkOrientation);
+        window.addEventListener('load', checkOrientation);
+    </script>
+</body>
+</html>
